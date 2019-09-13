@@ -4,7 +4,7 @@
       <v-btn text to="/">Messages</v-btn>
       <v-btn text to="/NewMessage">New Message</v-btn>
       <v-spacer></v-spacer>
-      <v-btn text to="/Register">Register</v-btn>
+      <v-btn text to="/Register" v-if="!$store.state.token">Register</v-btn>
       <v-btn text>Login</v-btn>
     </v-app-bar>
 
@@ -24,6 +24,9 @@ export default {
   components: {
     Messages,
     NewMessage
+  },
+  data() {
+    return {};
   }
 };
 </script>
