@@ -12,6 +12,7 @@
             </v-col>
             <v-col cols="12" md="4">
               <v-text-field
+                :append-icon="show1 ? 'fas fa-eye' : 'fas fa-eye-slash'"
                 v-model="password"
                 label="Password"
                 :rules="[rules.required]"
@@ -23,7 +24,7 @@
           </v-row>
         </v-container>
         <v-card-actions>
-          <v-btn class="mr-4" @click="register">register</v-btn>
+          <v-btn class="mr-4" @click="register">Register</v-btn>
         </v-card-actions>
       </v-form>
     </v-card>
@@ -50,6 +51,7 @@ export default {
         password: this.password
       });
       this.userName = "";
+      this.password = "";
     }
   }
 };
